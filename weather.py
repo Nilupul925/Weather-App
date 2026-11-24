@@ -1,14 +1,13 @@
 import tkinter as tk
+from datetime import datetime
 from tkinter import *
 
+# import requests
+import pytz
 from geopy.geocoders import Nominatim
 
 # from tkinter import ttk, messagebox
 from timezonefinder import TimezoneFinder
-
-# from datetime import datetime
-# import requests
-# import pytz
 
 # Build main window
 root = Tk()
@@ -22,11 +21,16 @@ def getWeather():
 
     geoLocator = Nominatim(user_agent="weather-app-api")
     location = geoLocator.geocode(city)
+
     obj = TimezoneFinder()
     result = obj.timezone_at(lng=location.longitude, lat=location.latitude)
 
-    # To check the result
-    print(result)
+    home = pytz.timezone(result)
+    local_time = datetime.now(home)
+    current_time = local_time.strftime("%I:%M %p")
+
+    clock.config(text=current_time)
+    name.config(text="Current Weather")
 
 
 # Search box
@@ -63,6 +67,13 @@ logo.place(x=150, y=100)
 frame_image = PhotoImage(file="box.png")
 frame_box = Label(image=frame_image)
 frame_box.pack(padx=5, pady=5, side="bottom")
+
+# Time
+name = Label(root, font=("arial", 15, "bold"))
+name.place(x=30, y=100)
+
+clock = Label(root, font=("Helvetica", 20))
+clock.place(x=30, y=130)
 
 # Bottom box columns
 label_WIND = Label(
