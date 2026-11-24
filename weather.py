@@ -26,4 +26,8 @@ textField.place(x=100, y=40)
 # Direct keyboard input focus to the this text box
 textField.focus()
 
+search_icon = PhotoImage(file="search_icon.png")
+search_box_btn = Button(image=search_icon, borderwidth=0, cursor="hand2", bg="#404040")
+search_box_btn.place(x=400, y=34)
+
 root.mainloop()
