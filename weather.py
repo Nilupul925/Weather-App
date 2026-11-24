@@ -40,4 +40,25 @@ frame_image = PhotoImage(file="box.png")
 frame_box = Label(image=frame_image)
 frame_box.pack(padx=5, pady=5, side="bottom")
 
+# Bottom box columns
+label_WIND = Label(
+    root, text="WIND", font=("Helvetica", 15, "bold"), fg="white", bg="#1AB5EF"
+)
+label_WIND.place(x=120, y=400)
+
+label_HUMIDITY = Label(
+    root, text="HUMIDITY", font=("Helvetica", 15, "bold"), fg="white", bg="#1AB5EF"
+)
+label_HUMIDITY.place(x=230, y=400)
+
+label_DESCRIPTION = Label(
+    root, text="DESCRIPTION", font=("Helvetica", 15, "bold"), fg="white", bg="#1AB5EF"
+)
+label_DESCRIPTION.place(x=430, y=400)
+
+label_PRESSURE = Label(
+    root, text="PRESSURE", font=("Helvetica", 15, "bold"), fg="white", bg="#1AB5EF"
+)
+label_PRESSURE.place(x=650, y=400)
+
 root.mainloop()
