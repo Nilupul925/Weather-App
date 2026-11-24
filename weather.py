@@ -30,4 +30,9 @@ search_icon = PhotoImage(file="search_icon.png")
 search_box_btn = Button(image=search_icon, borderwidth=0, cursor="hand2", bg="#404040")
 search_box_btn.place(x=400, y=34)
 
+# Logo
+log_image = PhotoImage(file="logo.png")
+logo = Label(image=log_image)
+logo.place(x=150, y=100)
+
 root.mainloop()
