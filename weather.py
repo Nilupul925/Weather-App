@@ -35,4 +35,9 @@ log_image = PhotoImage(file="logo.png")
 logo = Label(image=log_image)
 logo.place(x=150, y=100)
 
+# Bottom box
+frame_image = PhotoImage(file="box.png")
+frame_box = Label(image=frame_image)
+frame_box.pack(padx=5, pady=5, side="bottom")
+
 root.mainloop()
