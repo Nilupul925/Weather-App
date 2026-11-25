@@ -56,7 +56,7 @@ def getWeather():
     current_time = local_time.strftime("%I:%M %p")
 
     clock.config(text=current_time)
-    name.config(text="Current Weather")
+    name.config(text="Current weather at")
 
     # Weather details
     if not api_key:
