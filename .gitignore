@@ -1,2 +1,16 @@
+# Secrets
 .env
-.vscode
+
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Editor / OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
